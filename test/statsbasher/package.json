@@ -1,0 +1,19 @@
+{
+  "name": "basher",
+  "version": "0.0.1",
+  "description": "Stats basher",
+  "main": "basher.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "rc": "*",
+    "fh-statsc": "*", 
+    "async": "*"
+  },
+  "devDependencies": {
+  },
+  "private": true,
+  "scripts": {
+  }
+}

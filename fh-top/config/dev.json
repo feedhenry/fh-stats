@@ -1,0 +1,12 @@
+{
+  "debug": false,
+  "mgmt_port": 8146,
+  "mgmt_host": "localhost",
+  "stream_port": 8147,
+  "stream_host": "localhost",
+  "debugInterval":  10000,
+  "dumpMessages":  false,
+  "port": 8145,
+  "address": "0.0.0.0"
+}
+

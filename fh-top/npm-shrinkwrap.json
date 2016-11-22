@@ -1,0 +1,23 @@
+{
+  "name": "fh-top",
+  "version": "0.5.1-BUILD-NUMBER",
+  "dependencies": {
+    "ncurses": {
+      "version": "0.4.1",
+      "from": "ncurses@0.4.1",
+      "resolved": "https://registry.npmjs.org/ncurses/-/ncurses-0.4.1.tgz"
+    },
+    "optimist": {
+      "version": "0.3.5",
+      "from": "optimist@0.3.5",
+      "resolved": "https://registry.npmjs.org/optimist/-/optimist-0.3.5.tgz",
+      "dependencies": {
+        "wordwrap": {
+          "version": "0.0.2",
+          "from": "wordwrap@~0.0.2",
+          "resolved": "https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz"
+        }
+      }
+    }
+  }
+}
