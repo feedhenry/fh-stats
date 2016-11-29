@@ -1,0 +1,22 @@
+{
+  "statsserver": {
+    "port": 8804,
+    "statsAPIKey": "8169a884c2ea5f1d4c3877098da1bbb8d7620cd66ca70560fd93a9e09b12b6d13",
+    "statscollector": {
+      "debug": false,
+      "debugInterval":  10000,
+      "dumpMessages":  false,
+      "historyLen": 360,
+      "port": 8145
+    },
+    "logger": {
+      "name": "statsserver",
+      "streams": [{
+        "type": "stream",
+        "src": true,
+        "level": "debug",
+        "stream": "process.stdout"
+      }]
+    }
+  }
+}
