@@ -12,4 +12,16 @@ fhBuildNode {
             }
         }
     }
+
+    dir('fh-top') {
+        stage('Install Dependencies') {
+            npmInstall {}
+        }
+
+        stage('Build') {
+            gruntBuild {
+                name = 'fh-top'
+            }
+        }
+    }
 }
