@@ -20,7 +20,7 @@ fh-statsd is deployed using npm. The statsd package (fh-statsd-<version>.tar.gz)
 To install (on ubuntu):
 
 sudo npm install fh-statsd-<version>.tar.gz
-    
+
 The necessary node dependency modules are also installed automatically.
 
 You can upgrade an existing intallation with the same command.    
@@ -50,9 +50,54 @@ Create a file called 'fh-statsd.conf' in the /etc/init directory, and put in the
 
     exec sudo fh-statsd /etc/feedhenry/fh-statsd/conf.json >> /var/log/feedhenry/fh-statsd/fh-statsd.log 2>&1
 
-The fh-statsd server can then be started/stopped with 
+The fh-statsd server can then be started/stopped with
     sudo start fh-statsd
     sudo stop fh-statsd
 
+# Developing on OpenShift
+For development purposes, we can build a CentOS based Docker image and watch for changes in the local filesystem which would be reflected in the running image.
 
+### Build the development image
+1. Generate the config file: `grunt fh-generate-dockerised-config`
+2. `docker build -t docker.io/my-Username/fh-statsd:dev -f Dockerfile.dev .`
+3. `oc edit dc fh-statsd`
+4. Replace the image with the tagged version above.
 
+### Hot Deployment
+
+The development image will allow you to sync local code changes to the running container without the need for rebuilding or redeploying the image.
+
+From the root of the `fh-statsd directory, run the following:
+```oc rsync --no-perms=true ./lib $(oc get po | grep fh-statsd | grep Running | awk '{print $1}'):/opt/app-root/src ```
+
+### Debugging with VS Code
+
+1. Open [Visual Studio Code](https://code.visualstudio.com/)
+2. `oc set probe dc fh-statsd --liveness --readiness --remove=true`
+3. `oc port-forward $(oc get po | grep fh-statsd | grep Running | awk '{print $1}') :5858`. - This will forward port 5858 from the running Pod to a local port. Note the port.
+4. Select the debug option and choose Node.js as the runtime.
+5. Set the `launch.json` file similar to the following, using the port obtained above via the port forward command:
+
+```json
+ {
+     "version": "0.2.0",
+     "configurations": [
+         {
+             "type": "node",
+             "request": "attach",
+             "name": "Attach to Remote",
+             "address": "localhost",
+             "port": "<PORT_HERE>",
+             "localRoot": "${workspaceRoot}",
+             "remoteRoot": "/opt/app-root/src/"
+         },
+         {
+             "type": "node",
+             "request": "launch",
+             "name": "Launch Program",
+             "program": "${workspaceRoot}/bin/fh-statsd.js"
+         }
+     ]
+ }
+ ```
+6. Click `Attach to Remote`
