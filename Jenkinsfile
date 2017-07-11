@@ -1,6 +1,6 @@
 //https://github.com/feedhenry/fh-pipeline-library
 
-fhBuildNode {
+fhBuildNode([labels: ['nodejs6-ubuntu']]) {
     dir('fh-statsd') {
         stage('Install Dependencies') {
             npmInstall {}
