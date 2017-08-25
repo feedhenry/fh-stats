@@ -677,19 +677,24 @@
       }
     },
     "fh-config": {
-      "version": "0.1.8",
-      "from": "https://registry.npmjs.org/fh-config/-/fh-config-0.1.8.tgz",
-      "resolved": "https://registry.npmjs.org/fh-config/-/fh-config-0.1.8.tgz",
+      "version": "2.0.0",
+      "from": "fh-config@2.0.0",
+      "resolved": "https://registry.npmjs.org/fh-config/-/fh-config-2.0.0.tgz",
       "dependencies": {
+        "async": {
+          "version": "0.9.2",
+          "from": "https://registry.npmjs.org/async/-/async-0.9.2.tgz",
+          "resolved": "https://registry.npmjs.org/async/-/async-0.9.2.tgz"
+        },
         "bunyan": {
-          "version": "1.8.5",
-          "from": "https://registry.npmjs.org/bunyan/-/bunyan-1.8.5.tgz",
-          "resolved": "https://registry.npmjs.org/bunyan/-/bunyan-1.8.5.tgz",
+          "version": "1.8.4",
+          "from": "https://registry.npmjs.org/bunyan/-/bunyan-1.8.4.tgz",
+          "resolved": "https://registry.npmjs.org/bunyan/-/bunyan-1.8.4.tgz",
           "dependencies": {
             "dtrace-provider": {
-              "version": "0.8.0",
-              "from": "https://registry.npmjs.org/dtrace-provider/-/dtrace-provider-0.8.0.tgz",
-              "resolved": "https://registry.npmjs.org/dtrace-provider/-/dtrace-provider-0.8.0.tgz",
+              "version": "0.7.1",
+              "from": "https://registry.npmjs.org/dtrace-provider/-/dtrace-provider-0.7.1.tgz",
+              "resolved": "https://registry.npmjs.org/dtrace-provider/-/dtrace-provider-0.7.1.tgz",
               "dependencies": {
                 "nan": {
                   "version": "2.4.0",
@@ -800,11 +805,16 @@
               "resolved": "https://registry.npmjs.org/safe-json-stringify/-/safe-json-stringify-1.0.3.tgz"
             },
             "moment": {
-              "version": "2.16.0",
-              "from": "https://registry.npmjs.org/moment/-/moment-2.16.0.tgz",
-              "resolved": "https://registry.npmjs.org/moment/-/moment-2.16.0.tgz"
+              "version": "2.15.2",
+              "from": "https://registry.npmjs.org/moment/-/moment-2.15.2.tgz",
+              "resolved": "https://registry.npmjs.org/moment/-/moment-2.15.2.tgz"
             }
           }
+        },
+        "underscore": {
+          "version": "1.8.3",
+          "from": "https://registry.npmjs.org/underscore/-/underscore-1.8.3.tgz",
+          "resolved": "https://registry.npmjs.org/underscore/-/underscore-1.8.3.tgz"
         },
         "winston": {
           "version": "0.8.3",
@@ -847,11 +857,6 @@
               "resolved": "https://registry.npmjs.org/stack-trace/-/stack-trace-0.0.9.tgz"
             }
           }
-        },
-        "async": {
-          "version": "0.9.2",
-          "from": "https://registry.npmjs.org/async/-/async-0.9.2.tgz",
-          "resolved": "https://registry.npmjs.org/async/-/async-0.9.2.tgz"
         }
       }
     },
