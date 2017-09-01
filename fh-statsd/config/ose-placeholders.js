@@ -6,7 +6,7 @@ var placeholders = {
     "streams": [{
       "type": "stream",
       "src": true,
-      "level": "$(FH_LOG_LEVEL)",
+      "level": "{{env.FH_LOG_LEVEL}}",
       "stream": "process.stdout"
     }]
   },
