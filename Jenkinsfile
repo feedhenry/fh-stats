@@ -14,5 +14,9 @@ fhBuildNode {
                 name = 'fh-stats'
             }
         }
+
+        stage('Build Image') {
+            dockerBuildNodeComponent("fh-statsd")
+        }
     }
 }
