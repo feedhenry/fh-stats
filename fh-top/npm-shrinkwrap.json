@@ -1,11 +1,11 @@
 {
   "name": "fh-top",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "dependencies": {
     "nan": {
-      "version": "2.6.2",
+      "version": "2.7.0",
       "from": "nan@>=2.0.9 <3.0.0",
-      "resolved": "https://registry.npmjs.org/nan/-/nan-2.6.2.tgz"
+      "resolved": "https://registry.npmjs.org/nan/-/nan-2.7.0.tgz"
     },
     "ncurses": {
       "version": "0.4.2",

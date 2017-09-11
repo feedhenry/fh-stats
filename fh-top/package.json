@@ -5,7 +5,7 @@
     "feedhenry"
   ],
   "license": "Apache-2.0",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "preferGlobal": true,
   "directories": {
     "doc": "./doc",
