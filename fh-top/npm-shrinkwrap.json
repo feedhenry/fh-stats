@@ -1,23 +1,26 @@
 {
   "name": "fh-top",
-  "version": "0.5.1-BUILD-NUMBER",
+  "version": "0.6.0",
   "dependencies": {
+    "nan": {
+      "version": "2.7.0",
+      "from": "nan@>=2.0.9 <3.0.0",
+      "resolved": "https://registry.npmjs.org/nan/-/nan-2.7.0.tgz"
+    },
     "ncurses": {
-      "version": "0.4.1",
-      "from": "ncurses@0.4.1",
-      "resolved": "https://registry.npmjs.org/ncurses/-/ncurses-0.4.1.tgz"
+      "version": "0.4.2",
+      "from": "ncurses@0.4.2",
+      "resolved": "https://registry.npmjs.org/ncurses/-/ncurses-0.4.2.tgz"
     },
     "optimist": {
       "version": "0.3.5",
       "from": "optimist@0.3.5",
-      "resolved": "https://registry.npmjs.org/optimist/-/optimist-0.3.5.tgz",
-      "dependencies": {
-        "wordwrap": {
-          "version": "0.0.2",
-          "from": "wordwrap@~0.0.2",
-          "resolved": "https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.2.tgz"
-        }
-      }
+      "resolved": "https://registry.npmjs.org/optimist/-/optimist-0.3.5.tgz"
+    },
+    "wordwrap": {
+      "version": "0.0.3",
+      "from": "wordwrap@>=0.0.2 <0.1.0",
+      "resolved": "https://registry.npmjs.org/wordwrap/-/wordwrap-0.0.3.tgz"
     }
   }
 }
