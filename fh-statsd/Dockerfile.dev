@@ -16,8 +16,8 @@ RUN ln -sf /usr/share/zoneinfo/UTC /etc/localtime && \
 
 USER default
 
-RUN scl enable rh-nodejs4 "npm install -g nodemon" && \
-    scl enable rh-nodejs4 "npm install --production" && \
+RUN scl enable rh-nodejs6 "npm install -g nodemon" && \
+    scl enable rh-nodejs6 "npm install --production" && \
     mv conf-docker.json config/conf.json && \
     chmod -R ug+rw ./
 
