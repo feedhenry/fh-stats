@@ -6,7 +6,8 @@ USER root
 
 RUN ln -sf /usr/share/zoneinfo/UTC /etc/localtime && \
     mkdir -p config && \
-    chown -R default:root ./
+    chown -R default:root ./ && \
+    yum -y remove kernel-headers 
 
 USER default
 
