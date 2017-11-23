@@ -12,6 +12,8 @@
     "lib": "bin"
   },
   "scripts": {
+    "preshrinkwrap": "npm cache clean && npm ls",
+    "postshrinkwrap": "license-reporter save --full-dependency-tree --xml licenses.xml && license-reporter report --full-dependency-tree --silent",
     "install": "scripts/install.sh",
     "test": "grunt fh:test",
     "start": "node bin/fh-statsd.js config/conf.json --master-only"
