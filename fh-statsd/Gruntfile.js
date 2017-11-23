@@ -3,8 +3,8 @@ module.exports = function(grunt) {
 
   // Just set shell commands for running different types of tests
   grunt.initConfig({
-    _test_runner: 'expresso',
-    _unit_args: '-I lib -q -c -b',
+    _test_runner: '_mocha',
+    _unit_args: '-b -A -u exports -t 10000 --recursive test/',
 
     // These are the properties that grunt-fh-build will use
     unit: '<%= _test_runner %> <%= _unit_args %>',
