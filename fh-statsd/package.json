@@ -1,7 +1,7 @@
 {
   "name": "fh-statsd",
   "description": "FeedHenry Stats Server",
-  "version": "2.1.0-BUILD-NUMBER",
+  "version": "2.1.1-BUILD-NUMBER",
   "repository": {
     "type": "git",
     "url": "amz1svn1.feedhenry.com:/var/git/fh-stats.git"
@@ -12,6 +12,8 @@
     "lib": "bin"
   },
   "scripts": {
+    "preshrinkwrap": "npm cache clean && npm ls",
+    "postshrinkwrap": "license-reporter save --full-dependency-tree --xml licenses.xml && license-reporter report --full-dependency-tree --silent",
     "install": "scripts/install.sh",
     "test": "grunt fh:test",
     "start": "node bin/fh-statsd.js config/conf.json --master-only"
@@ -35,9 +37,11 @@
   "man": "./man/fh-statsd.1",
   "preferGlobal": "true",
   "devDependencies": {
-    "expresso": "~0.9.2",
     "grunt": "1.0.1",
     "grunt-fh-build": "~2.0.0",
-    "istanbul": "~0.3.22"
+    "istanbul": "~0.3.22",
+    "license-reporter": "github:bucharest-gold/license-reporter#d74abaf47220137b6dfd3a070556c6d5c4f2003b",
+    "mocha": "^4.0.1",
+    "request": "^2.83.0"
   }
 }

@@ -21,6 +21,10 @@ fhBuildNode([labels: ['nodejs6-ubuntu']]) {
             npmInstall {}
         }
 
+        stage('Unit Tests') {
+            sh 'grunt fh-unit'
+        }
+
         stage('Build') {
             gruntBuild {
                 name = COMPONENT
