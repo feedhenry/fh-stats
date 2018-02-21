@@ -27,7 +27,7 @@ exports.after = function after(done) {
 };
 
 exports.testDefault = function(done) {
-  return request('http://localhost:9876/unknown_file', function(err, response, body) {
+  return request('http://localhost:9876/stats/history', function(err, response, body) {
     assert.equal(403, response.statusCode);
     return done();
   });
