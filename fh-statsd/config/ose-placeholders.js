@@ -10,7 +10,7 @@ var placeholders = {
       "stream": "process.stdout"
     }]
   },
-  "statsserver.statsAPIKey": "$(FH_STATSD_API_KEY)"
+  "statsserver.statsAPIKey": "{{env.FH_STATSD_API_KEY}}"
 };
 
 module.exports = placeholders;
