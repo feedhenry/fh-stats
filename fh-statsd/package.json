@@ -1,7 +1,7 @@
 {
   "name": "fh-statsd",
   "description": "FeedHenry Stats Server",
-  "version": "2.0.4-BUILD-NUMBER",
+  "version": "2.0.5-BUILD-NUMBER",
   "repository": {
     "type": "git",
     "url": "amz1svn1.feedhenry.com:/var/git/fh-stats.git"
@@ -27,7 +27,7 @@
     "async": "0.1.18",
     "body-parser": "1.14.1",
     "dateformat": "*",
-    "express": "^4.13.3",
+    "express": "^4.16.2",
     "fh-config": "^0.1.2",
     "fh-logger": "0.5.0",
     "optimist": "0.3.1"
