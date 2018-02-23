@@ -27,7 +27,7 @@
     "async": "0.1.18",
     "body-parser": "1.14.1",
     "dateformat": "*",
-    "express": "^4.13.3",
+    "express": "^4.16.2",
     "fh-config": "^0.1.2",
     "fh-logger": "0.5.0",
     "optimist": "0.3.1"
