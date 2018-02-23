@@ -1,6 +1,6 @@
 {
   "name": "fh-statsd",
-  "version": "2.0.4-BUILD-NUMBER",
+  "version": "2.0.5-BUILD-NUMBER",
   "dependencies": {
     "async": {
       "version": "0.1.18",
