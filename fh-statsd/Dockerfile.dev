@@ -16,10 +16,12 @@ RUN ln -sf /usr/share/zoneinfo/UTC /etc/localtime && \
 
 USER default
 
-RUN scl enable rh-nodejs6 "npm install -g nodemon" && \
+RUN scl enable rh-nodejs6 "npm install -g forever" && \
     scl enable rh-nodejs6 "npm install --production" && \
     mv conf-docker.json config/conf.json && \
     chmod -R ug+rw ./
+
+RUN echo "node_modules" >> .foreverignore
 
 USER root
 RUN  mkdir -p /root/licenses/rhmap/ && \
@@ -27,4 +29,4 @@ RUN  mkdir -p /root/licenses/rhmap/ && \
 USER default
 
 ENV FHDEV true
-CMD ["bash", "-c", "nodemon --debug=5858 bin/fh-statsd.js config/conf.json --master-only"]
+CMD ["forever","-w","--watchDirectory=/opt/app-root/src", "-c", "node --debug", "bin/fh-statsd.js","config/conf.json","--master-only"]
